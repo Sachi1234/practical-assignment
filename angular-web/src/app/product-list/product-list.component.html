@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="col">
+    <div class="row">
+      <div class="col-12 col-sm-3">
+        <div *ngFor="let product of productLists">
+          <app-product [routerLink]="[product.title,product.description, product.image, product.price]"
+                       [title]="product.title"
+                       [description]="product.description" [price]="product.price"
+                       [image]="product.image"></app-product>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

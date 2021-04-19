@@ -1,0 +1,19 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-primary" [containerInside]="false">
+  <mdb-navbar-brand><a class="navbar-brand" href="#">E -Commerce App</a></mdb-navbar-brand>
+</mdb-navbar>
+<div class="col-xs-6 col-sm-4 col-lg-2">
+<div class="card bg-light mb-3">
+  <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Categories</div>
+  <ul class="list-group category_block">
+    <div *ngFor="let category of categoryList">
+    <li class="list-group-item"><a [routerLink]= "[category.categoryName]">{{category.categoryName}}</a></li>
+    </div>
+  </ul>
+</div>
+  <div class="col-xs-7 col-sm-6 col-lg-8">
+  <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+
